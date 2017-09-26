@@ -1,0 +1,51 @@
+@import "bourbon";
+@import "utils/vars";
+
+html {
+	font-size: 13px;
+
+	@media only screen and (min-width : 992px){
+		font-size: 16px;
+	}
+}
+
+body {
+	@extend .max-width;
+	min-width: 270px;
+	position: relative;
+	font-family: $default-font;
+	font-weight: 400;
+	overflow-x: hidden;
+}
+
+.max-width {
+	max-width: 1384px;
+	width: 100%;
+	margin: 0 auto;
+
+	@media only screen and (min-width : 760px) {
+		padding: 0 15px;
+	}
+}
+
+.clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	transition: background-color 0.1s;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+}
+

@@ -1,0 +1,341 @@
+header {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+
+  @media only screen and (min-width : 760px){
+    padding: 29px 17px 0;
+  }
+
+  @media only screen and (min-width : 1300px){
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+.top-header {
+  order: 2;
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+
+  @media only screen and (min-width : 760px) {
+    order: inherit;
+    flex-flow: nowrap;
+  }
+}
+
+.mobTools {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 100%;
+  height: 40px;
+  padding-left: 54px;
+  background-color: #f0f1f6;
+
+  @media only screen and (min-width : 760px) {
+    display: none;
+  }
+
+  &__item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(210,166,107,.88);
+    }
+  }
+
+  &__home {
+    @include sprite($icon-home-320);
+  }
+  &__search {
+    @include sprite($icon-search-320);
+  }
+  &__basket {
+    @include sprite($icon-basket-320);
+  }
+  &__user {
+    @include sprite(($icon-user-320));
+  }
+  &__phone {
+    @include sprite($icon-phone-320);
+  }
+}
+
+.logo {
+  width: 100%;
+  margin-top: 13px;
+  margin-bottom: 2px;
+  padding: 0 20px;
+  white-space: nowrap;
+
+  @media only screen and (min-width : 760px){
+    width: 179px;
+    min-width: 179px;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  @media only screen and (min-width : 768px){
+    margin-bottom: 32px;
+    margin-top: 5px;
+  }
+
+  @media only screen and (min-width : 992px){
+    width: 247px;
+    min-width: 247px;
+  }
+
+  &__description {
+    color: #747688;
+    padding-top: 5px;
+    font-size: 13px;
+
+    @media only screen and (min-width : 768px) {
+      padding-top: 10px;
+    }
+
+    @media only screen and (min-width : 992px){
+      font-size: 14px;
+    }
+  }
+
+  &__photo {
+    width: 192px;
+    height: 23px;
+
+    @media only screen and (min-width : 760px){
+      width: 100%;
+    }
+  }
+}
+
+.search {
+  display: none;
+
+  @media only screen and (min-width : 760px){
+    display: block;
+    position: relative;
+    cursor: pointer;
+    max-width: 221px;
+    width: 100%;
+    height: 31px;
+    margin-left: 40px;
+    margin-right: 15px;
+    padding: 5px 35px 5px 10px;
+    border: 1px solid #b9b8bd;
+    border-radius: 3px;
+  }
+
+  @media only screen and (min-width : 768px){
+    max-width: 496px;
+    height: 40px;
+    margin-left: 15px;
+  }
+
+  @media only screen and (min-width : 1600px){
+    margin-left: -40px;
+    margin-right: 0;
+  }
+
+  &__input {
+    @media only screen and (min-width : 760px){
+      @include fontSize(12px);
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #181818;
+      border: 0;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &__icon {
+    @media only screen and (min-width : 760px){
+      @include sprite($icon-search-768);
+      position: absolute;
+      right: 9px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @media only screen and (min-width : 768px){
+      @include sprite($icon-search);
+      background-position: -37px 2px;
+    }
+  }
+}
+
+.wrap-work {
+  display: none;
+
+  @media only screen and (min-width : 760px){
+    display: flex;
+    justify-content: flex-end;
+    width: 240px;
+    white-space: nowrap;
+  }
+
+  @media only screen and (min-width : 768px){
+    width: 345px;
+  }
+}
+
+.phone {
+  @media only screen and (min-width : 760px){
+    color: #181616;
+    font-size: 15px;
+  }
+
+  @media only screen and (min-width : 768px){
+    margin-top: 10px;
+  }
+
+  @media only screen and (min-width : 860px){
+    font-size: 23px;
+  }
+}
+
+.work {
+  display: none;
+
+  @media only screen and (min-width : 760px){
+    display: block;
+    margin-left: 17px;
+    font-size: 10px;
+  }
+
+  @media only screen and (min-width : 768px){
+    margin-top: 6px;
+    font-size: 14px;
+  }
+
+  &__time {
+    color: #cb944c;
+  }
+
+  &__delivery {
+    color: #2b3056;
+    padding-top: 2px;
+  }
+}
+
+.tools {
+  display: none;
+
+  @media only screen and (min-width : 760px){
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.basket {
+  @media only screen and (min-width : 760px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 15px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  @media only screen and (min-width : 768px) {
+    font-size: 14px;
+    margin-right: 19px;
+  }
+
+  &__icon {
+    @media only screen and (min-width : 760px) {
+      @include  sprite($icon-basket-768);
+    }
+
+    @media only screen and (min-width : 768px){
+      @include  sprite($icon-bascet);
+    }
+  }
+
+  &__counter {
+    @media only screen and (min-width : 760px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 20px;
+      height: 17px;
+      margin-left: 12px;
+      margin-right: 7px;
+      border-radius: 50%;
+      background-color: #cb944c;
+      color: #fff;
+    }
+
+    @media only screen and (min-width : 768px) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &__text {
+    @media only screen and (min-width : 760px) {
+      display: block;
+      color: #252a54;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    @media only screen and (min-width : 768px) {
+      font-size: 14px;
+    }
+  }
+
+  &__text-price {
+    letter-spacing: 1.5px;
+
+    @media only screen and (min-width : 768px) {
+      letter-spacing: 1.2px;
+    }
+  }
+}
+
+
+.user {
+  display: none;
+
+  @media only screen and (min-width : 760px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+  }
+
+  &__icon {
+    @media only screen and (min-width : 760px) {
+      @include sprite($icon-user-768);
+      margin-right: 8px;
+    }
+
+    @media only screen and (min-width : 768px){
+      @include sprite($icon-user);
+    }
+  }
+
+  &__text {
+    @media only screen and (min-width : 760px) {
+      @include fontSize(16px);
+      color: #252a54;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "bourbon";
+@import "utils/vars";
+
+//for iPhone
+input, textarea {
+  box-shadow: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  outline: none;
+}
+//-----------------------
+
+*::-webkit-input-placeholder {
+  color: #b9b8bd;
+  opacity: 1;
+}
+
+*:-moz-placeholder {
+  color: #b9b8bd;
+  opacity: 1;
+}
+
+*::-moz-placeholder {
+  color: #b9b8bd;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder {
+  color: #b9b8bd;
+  opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: #666;
+}
+
+body input:required:valid,
+body textarea:required:valid {
+  color: #666;
+}
+
+input,
+button {
+  outline: none;
+}
