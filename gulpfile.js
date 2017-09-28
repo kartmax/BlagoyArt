@@ -40,7 +40,8 @@ gulp.task('scripts', function() {
 gulp.task('spritepng', function () {
     var spriteData = gulp.src('app/img/for-sprite-png/*.png').pipe(spritesmith({
         imgName: 'sprite-png.png',
-        cssName: '_sprite-png.scss'
+        cssName: '_sprite-png.scss',
+        padding: 10
     }));
     return spriteData.pipe(gulp.dest('app/img'));
 });
